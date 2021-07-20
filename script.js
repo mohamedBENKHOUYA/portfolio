@@ -1,4 +1,3 @@
-console.log('hola');
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -18,7 +17,6 @@ const sidebar_link = document.querySelectorAll('.sidebar_link ');
 
 let x = window.matchMedia('(max-width: 700px)');
 
-console.log('hole');
 
 
 let map = new Map();
