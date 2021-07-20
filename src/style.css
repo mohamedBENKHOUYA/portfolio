@@ -316,8 +316,7 @@ body {
   color: var(--white);
   transform: translateY(-5px);
 }
-::-webkit-file-upload-button {
-}
+
 .adjust {
   /* position: relative; */
   min-height: 100vh;

@@ -1,8 +1,9 @@
+console.log('hola');
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
-} from './node_modules/body-scroll-lock/lib/bodyScrollLock.js';
+} from '../node_modules/body-scroll-lock/lib/bodyScrollLock.js';
 
 let services;
 let projects;
@@ -16,6 +17,9 @@ const links = document.querySelectorAll('.navigation li a');
 const sidebar_link = document.querySelectorAll('.sidebar_link ');
 
 let x = window.matchMedia('(max-width: 700px)');
+
+console.log('hole');
+
 
 let map = new Map();
 map.set('active', sidebar_link[0]);
