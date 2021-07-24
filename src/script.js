@@ -1,8 +1,8 @@
-import {
+let {
+  clearAllBodyScrollLocks,
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from './node_modules/body-scroll-lock/lib/bodyScrollLock.js';
+} = require('body-scroll-lock');
 
 let services;
 let projects;
@@ -81,7 +81,7 @@ toggle.onclick = (e) => {
   }
 };
 
-fetch('./services.json')
+fetch('./assets/services.json')
   .then((res) => {
     return res.json();
   })
@@ -103,8 +103,9 @@ fetch('./services.json')
       contentServices.appendChild(div);
     });
   });
+  
 
-fetch('./projects.json')
+fetch('./assets/projects.json')
   .then((res) => {
     return res.json();
   })

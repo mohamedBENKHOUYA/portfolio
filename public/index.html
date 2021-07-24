@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Personal Portfolio</title>
-  </head>
-  <body>
-    <div class="container">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/style.css">
+  <title>portfolio</title>
+</head>
+<body>
+      <div class="container">
       <div class="navigation">
         <ul>
           <li class="sidebar_link active"><a href="#banner" style="--i: 1;">Home</a></li>
@@ -38,11 +32,11 @@
         <section class="banner" id="banner">
           <div class="content">
             <div class="imgBx">
-              <img src="./images/me2.png" alt="" />
+              <img src="./assets/images/me.jfif" alt="" />
             </div>
             <h3 class="name">Mohamed BEN KHOUYA</h3>
             <p class="iam">I'm a Creative Full Stack Developer.</p>
-            <a href="./Mohamed_BEN KHOUYA_CV.pdf" class="btn" download
+            <a href="./assets/Mohamed_BEN KHOUYA_CV.pdf" class="btn" download
               >Download My CV</a
             >
             <ul class="socialMedia">
@@ -50,7 +44,7 @@
                 <a href="https://www.facebook.com/profile.php?id=100005677413989"><i class="fab fa-facebook-square"></i></a>
               </li>
               <li>
-                <a href="https://twitter.com/BENKHOUYAMoham2"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/medBENKHOUYA"><i class="fab fa-twitter"></i></a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/mohamed-ben-khouya/"><i class="fab fa-linkedin"></i></a>
@@ -66,7 +60,7 @@
           </div>
           <div class="content">
             <div class="imgBox">
-              <img src="./images/bg1.jpg" alt="">
+              <img src="./assets/images/meWithSoufiane.jpeg" alt="">
             </div>
             <div class="textBox">
               <p>
@@ -87,8 +81,9 @@
                 avec le Wireshark et le host-based-firewall de microsoft. 
                 <br><br>
                 je fais toujours attention à écrire mon code en utilisant des promises et en créant des Error objects et les traiter avec les handlers.
-              
-                
+                <br><br>
+                J'aime apprendre de nouvelles choses et je suis autodidacte et débrouillard tout en étant
+                dans une bonne ambiance.
               </p>
             </div>
             
@@ -124,7 +119,17 @@
           <div class="content">
               <div class="testimonialsBox">
                 <div class="imgBox">
-                  <img src="./images/user1.jpg" alt="">
+                  <img src="./assets/images/user1.jpg" alt="">
+                </div>
+                <p>Lorem ipsumcomoe dolor sit amet consectetur adipisicing elit. Minima dolorem, sequi consequuntur repudiandae possimus voluptates cum esse vero nam? Tempore voluptatibus nostrum, iusto accusamus deserunt harum voluptate quaerat in doloremque.</p>
+                <div class="temoin">
+                    <a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
+                  <h4>Erick<br><span>WebsiteDesigner</span></h4>
+                </div>
+              </div>
+              <div class="testimonialsBox">
+                <div class="imgBox">
+                  <img src="./assets/images/user2.jpg" alt="">
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem, sequi consequuntur repudiandae possimus voluptates cum esse vero nam? Tempore voluptatibus nostrum, iusto accusamus deserunt harum voluptate quaerat in doloremque.</p>
                 <div class="temoin">
@@ -134,17 +139,7 @@
               </div>
               <div class="testimonialsBox">
                 <div class="imgBox">
-                  <img src="./images/user2.jpg" alt="">
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem, sequi consequuntur repudiandae possimus voluptates cum esse vero nam? Tempore voluptatibus nostrum, iusto accusamus deserunt harum voluptate quaerat in doloremque.</p>
-                <div class="temoin">
-                    <a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
-                  <h4>Erick<br><span>WebsiteDesigner</span></h4>
-                </div>
-              </div>
-              <div class="testimonialsBox">
-                <div class="imgBox">
-                  <img src="./images/user3.jpg" alt="">
+                  <img src="./assets/images/user3.jpg" alt="">
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem, sequi consequuntur repudiandae possimus voluptates cum esse vero nam? Tempore voluptatibus nostrum, iusto accusamus deserunt harum voluptate quaerat in doloremque.</p>
                 <div class="temoin">
@@ -189,6 +184,8 @@
     </div>
 
     
-    <script type="module" src="./script.js"></script>
-  </body>
+    <script src="./index.js"></script>
+ 
+
+</body>
 </html>

@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "img": "./assets/images/img1.jpg",
+      "h3": "Realisation d'une application web sur React et Docker"
+    },
+    {
+      "img": "./assets/images/img2.jpg",
+      "h3": "Plusieurs sites statiques"
+    },
+    {
+      "img": "./assets/images/img3.jpg",
+      "h3": "Des travaux réalisés avec Adobe"
+    },
+    {
+      "img": "./assets/images/img4.jpg",
+      "h3": "Une application sur Symfony"
+    },
+    {
+      "img": "./assets/images/img5.jpg",
+      "h3": "Project 05"
+    }
+    
+  ]
+}

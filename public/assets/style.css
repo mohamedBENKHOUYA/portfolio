@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap'); */
 *,
 *::after,
 *::before {
@@ -394,6 +394,7 @@ body {
   width: 300px;
   height: 400px;
   object-fit: cover;
+  object-position: left;
   border-radius: 5px;
 }
 
@@ -418,7 +419,6 @@ body {
   align-items: center;
   padding: 50px 20px;
   background: rgba(255, 255, 255, 0.3);
-
 }
 .serviceBox img {
   width: 50px;
@@ -500,7 +500,6 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
-
 }
 .testimonialsBox .imgBox {
   position: relative;
@@ -582,7 +581,11 @@ body {
   position: relative;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(to right bottom, rgb(181, 212, 226), rgb(184, 179, 226));
+  background: linear-gradient(
+    to right bottom,
+    rgb(181, 212, 226),
+    rgb(184, 179, 226)
+  );
 }
 .contactForm p {
   text-align: center;
@@ -663,7 +666,6 @@ textarea {
   font-weight: 300;
   font-size: 0.8rem;
   color: var(--white);
-
 }
 
 @media (max-width: 900px) {

@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "eleventy --serve",
+    "build-eleventy": "eleventy",
+    "build-webpack": "webpack" 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
   }
 }
