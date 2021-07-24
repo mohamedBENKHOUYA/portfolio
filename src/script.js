@@ -103,15 +103,16 @@ fetch('./assets/services.json')
       contentServices.appendChild(div);
     });
   });
-  
 
 fetch('./assets/projects.json')
-  .then((res) => {
-    return res.json();
+  .then((headers) => {
+    return headers.json();
   })
   .then((res) => {
     projects = res.projects;
     projects.forEach((item, index) => {
+      let link = document.createElement('a');
+      link.href = item.go;
       let workBox = document.createElement('div');
       workBox.classList.add('workBox');
       let imgBox = document.createElement('div');
@@ -128,6 +129,7 @@ fetch('./assets/projects.json')
       textBox.appendChild(h3);
       workBox.appendChild(imgBox);
       workBox.appendChild(textBox);
-      contentProjects.appendChild(workBox);
+      link.appendChild(workBox);
+      contentProjects.appendChild(link);
     });
   });

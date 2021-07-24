@@ -380,7 +380,10 @@ body {
   font-size: 1rem;
   color: var(--white);
 }
-
+.content a {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+}
 .about .content .imgBox {
   flex-basis: 0;
   flex-grow: 0.5;
