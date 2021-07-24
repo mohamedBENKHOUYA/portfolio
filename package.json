@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
+    "build": "eleventy",
     "build-eleventy": "eleventy",
     "build-webpack": "webpack" 
   },
