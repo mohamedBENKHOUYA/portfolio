@@ -2,7 +2,7 @@
   "projects": [
     {
       "img": "./assets/images/projectaws.png",
-      "h3": "Realisation d'une application web sur React et Docker sur aws",
+      "h3": "Realisation d'une application web sur React, Redis, Postgres, Node et Docker sur AWS",
       "go": "./project1"
     },
     {

@@ -1,28 +1,28 @@
 {
   "projects": [
     {
-      "img": "./assets/images/img1.jpg",
-      "h3": "Realisation d'une application web sur React et Docker",
+      "img": "./assets/images/projectaws.png",
+      "h3": "Realisation d'une application web sur React, Redis, Postgres, Node et Docker sur AWS",
       "go": "./project1"
     },
     {
-      "img": "./assets/images/img2.jpg",
+      "img": "./assets/images/developpement.jpg",
       "h3": "Plusieurs sites statiques",
       "go": "./project2"
 
     },
     {
-      "img": "./assets/images/img3.jpg",
+      "img": "./assets/images/psillustrator.jpg",
       "h3": "Des travaux réalisés avec Adobe",
       "go": "./project3"
     },
     {
-      "img": "./assets/images/img4.jpg",
+      "img": "./assets/images/symfonyapp.png",
       "h3": "Une application sur Symfony",
       "go": "./project4"
     },
     {
-      "img": "./assets/images/img5.jpg",
+      "img": "./assets/images/reactnative.png",
       "h3": "Project 05",
       "go": "./project5"
     }
