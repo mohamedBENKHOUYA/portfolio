@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #fff;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; 
+  background: url(bg2.jpg);
+  background-size: cover;
+  background-position-x: center;
+  animation-name: animatebg;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-fill-mode: initial;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  right: 50%;
+  top: 20%;
+  transform:  rotate(-60deg) ;
+  border-radius: 50%;
+  box-shadow: 0 0  0 4px rgba(255, 255, 255, .1),
+   0 0 0 8px rgba(255, 255, 255, .1),
+   0 0 20px rgba(255, 255, 255, 1);
+   animation-name: animate;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   /* animation-direction:alternate; */
+  /* display: flex;    */
+  opacity: 0;
+  
+}
+span::before {
+  content: '';
+  position: absolute;
+  /* margin-right: 1000px; */
+  /* display: inline-block; */
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+
+
+span:nth-of-type(1) {
+  top: 0;
+  /* right:; */
+  animation-duration: 2s;
+  /* animation-delay: .2s; */
+}
+
+
+
+span:nth-of-type(2) {
+  top: 10%;
+  right:40%;
+  animation-duration: 3s;
+  animation-delay: .1s;
+}
+
+
+span:nth-of-type(3) {
+  top: 20%;
+  right:40%;
+  animation-duration: 1s;
+  animation-delay: .2s;
+}
+
+
+span:nth-of-type(4) {
+  top: 40%;
+  right:60%;
+  animation-duration: 2s;
+  animation-delay: .4s;
+}
+
+
+span:nth-of-type(5) {
+  top: 50%;
+  right:50%;
+  animation-duration: 3s;
+  animation-delay: .6s;
+}
+
+
+span:nth-of-type(6) {
+  top: 60%;
+  right:30%;
+  animation-duration: 1.5s;
+  animation-delay: .8s;
+}
+span:nth-of-type(7) {
+  top: 70%;
+  right:70%;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+span:nth-of-type(8) {
+  top: 80%;
+  right:80%;
+  animation-duration: 2s;
+  animation-delay: .5s;
+}
+span:nth-of-type(9) {
+  top: 90%;
+  right:10%;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+
+
+
+@keyframes animate {
+  0% {
+    transform: rotate(-60deg) translateX(0);
+    opacity: 1 ;
+
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-60deg) translateX(-1000px);
+    opacity: 0;
+
+  }
+}
+
+@keyframes animatebg {
+  0%, 100% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

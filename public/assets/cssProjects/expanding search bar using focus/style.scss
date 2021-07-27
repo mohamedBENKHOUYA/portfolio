@@ -1,0 +1,109 @@
+*,*::before, *::after
+ {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+}
+
+body {
+    font-family: Josefin-Slab;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--clr-body);
+    background: var(--clr-bg);
+}
+
+.content {
+    background: white;
+    width: 70vw;
+    padding: 1.5rem;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+    
+    // border: solid;
+}
+.search-bar {
+    --size: 60px;
+    // border: solid;
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.65rem;
+    border-radius: 50px;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    transition: width 0.5s cubic-bezier(0, 0, 0.29, 1.65);
+    overflow: hidden;
+    // height: var(--size);
+
+    &__input {
+        flex-grow: 1;
+        font-size: 1.5rem;
+        background: transparent;
+        color: #000;
+        border: none;
+        padding: 0 1em;
+        // border: 1px solid #000;
+        outline: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        line-height: var(--size);
+        border:none;
+        opacity: 0;
+        transition: opacity .6s ease;
+        cursor: pointer;
+        width: calc( 100% - var(--size) );
+        // clip-path: inset(0 100% 0 0);
+        // transform-origin: left;
+        // transition: clip-path .3s ease;
+      
+    }
+    
+
+    &__submit {
+        font-size: 1.5rem;
+        cursor: pointer;
+        outline: none;
+        background: transparent;
+        border: none;
+        border-radius: 50%;
+        // border: solid;
+        height: 40px;
+        width: 40px;
+        // box-shadow: 0 0 20px rgba(0, 0, 0, 0.6 );
+        margin-left: auto;
+        transition: all .9s ease;
+    }
+
+    &:focus-within {
+        width: 100%;
+        .search-bar__input {
+            opacity: 1;
+            cursor: initial;
+         
+        }
+
+        .search-bar__submit {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6 );
+            color: var(--clr-primary);
+            &:focus, &:hover{
+                outline: 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+                opacity: 0.5;  
+            }
+        }
+
+    }
+    
+}

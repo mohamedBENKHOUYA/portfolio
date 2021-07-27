@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  /* width: 100%; */
+  height: 100vh;
+  background: url(./img/battle.PNG);
+  background-position-x: center;
+  background-size: 130% 100%;
+  cursor: url(./img/pic.PNG), pointer;
+}
+
+section:active {
+  cursor: url(./img/aim_red.PNG), pointer;
+}
+
+.bullet {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url(./img/hole.PNG);
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  transform: translate( 15px, 15px);
+  /* border: solid; */
+}
+.blood {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  /* background: url(./img/blood1.PNG); */
+  background-position: center;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation-name: fadeOutBlood;
+  animation-duration: 4s;
+  /* animation-delay: 3s; */
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes fadeOutBlood {
+ 0%, 50% {opacity: 1;}
+ 
+  to {
+    opacity: 0;
+  }
+}

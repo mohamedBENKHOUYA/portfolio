@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.parent {
+  display: block;
+  background-color: #23424A;
+  padding: 50px;
+  width: 50%;
+  font-size: 30px;
+  min-width: 30em;
+  margin: 0 auto;
+}
+
+.child {
+  background-color: #38CFD9;
+
+  height: 250px;
+} 
+

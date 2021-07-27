@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Typing Loading</title>
+  </head>
+  <body>
+    <div class="loader">
+      <span class="anim1"></span>
+      <span class="anim4"></span>
+      <span class="anim3"></span>
+      <span class="anim2"></span>
+      <h3>Loading...</h3>
+    </div>
+
+    <script>
+      const anim1 = document.querySelector('.anim1');
+      const anim2 = document.querySelector('.anim2');
+      //     animation-name: anim4;
+      // animation-duration: 1s;
+      const anim3 = document.querySelector('.anim3');
+      //     animation-name: anim3;
+      // animation-duration: 1s;
+      const anim4 = document.querySelector('.anim4');
+      //     animation-name: anim2;
+      // animation-duration: 1s;
+      const loader = document.querySelector('.loader');
+
+      function addresolve(element, elementclass) {
+        return new Promise(function (resolve, reject) {
+          element.classList.add(elementclass);
+          element.addEventListener('animationend', (e) => {
+            resolve(elementclass);
+          });
+        });
+      }
+
+      function repeatCall() {
+        return addresolve(anim1, 'firstactive')
+          .then((res) => {
+            anim1.classList.remove('firstactive');
+            console.log(res);
+            return addresolve(anim2, 'secondactive');
+          })
+          .then((res) => {
+            anim2.classList.remove('secondactive');
+            return addresolve(anim3, 'thirdactive');
+          })
+          .then((res) => {
+            anim3.classList.remove('thirdactive');
+            return addresolve(anim4, 'lastactive');
+          })
+          .then((res) => {
+            anim4.classList.remove('lastactive');
+            repeatCall();
+            return 'finish';
+          });
+      }
+      repeatCall();
+
+      new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          resolve('resolved');
+        }, 10000);
+      }).finally(() => {
+        // loader.remove();
+      });
+
+      // window.setInterval(repeatCall, 5000);
+    </script>
+  </body>
+</html>
+
+<!-- texttyping loading 4 -->

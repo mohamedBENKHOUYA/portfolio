@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ .fancy-link {
+  text-decoration: none;
+  color: #ee6352;
+  position: relative;
+  /* border: solid; */
+}
+.fancy-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: currentcolor;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .4s ease;
+  /* cubic-bezier(0.09, 1.01, 0.46, 1.91) */
+}
+.fancy-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button {
+  cursor: pointer;
+  border: 0;
+  background: #ee6352;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  z-index: 1;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform .4s ease;
+  background: rgba(0, 0, 0, 0.3);
+  /* clip-path: circle(30% at 50% 50%); */
+  z-index: -1;
+}
+.button:hover::after {
+  transform-origin: left;
+  transform: scale(1);
+}
+
+
+.button + .button {
+  margin-left: 1em;
+}
+
+.card {
+  padding: 2rem;
+  background-image: url(https://unsplash.it/600);
+  background-color: #444;
+  background-size: cover;
+
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  background-blend-mode: multiply;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+body {
+  font-family: basic-sans, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+}
+
+.content {
+  background: white;
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+.content + .content {
+  margin-top: 1em;
+}
+
+
+.title {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  color: #f15d4a;
+  line-height: 0.8;
+} 
+
+
+.card h3 {
+  /* transform: scale(0); */
+  background: transparent;
+  border-radius: 3px;
+  /* position: absolute; */
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.card p {
+  /* transform: scale(0); */
+  /* border: solid #fff; */
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 3px;
+  /* background: red; */
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+  transition: color .1s;
+  transition-delay: .5s;
+  color: transparent;
+}
+.card p::after {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  bottom: -1rem;
+  width: 100%;
+  /* height: 100%; */
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.8);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform .5s ease .4s;
+  /* transition-delay: .4s; */
+
+}
+.card:hover p::after {
+  transform: scaleY(1);
+}
+.card:hover p {
+  color: red;
+}
+
+.card h3::after {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  left: -2rem;
+  bottom: 0;
+  width: calc(102% + 2rem);
+  /* height: 100%; */
+  background: #f14d41;
+  z-index: -1;
+  transform-origin: left;
+  transform: scaleX(0.1);
+  transition: transform .5s ease;
+}
+.card:hover h3::after {
+  transform: scaleX(1);
+}

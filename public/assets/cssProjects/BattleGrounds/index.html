@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Battle | Grounds</title>
+  </head>
+  <body>
+    <section>
+      <audio src="audio.mp3" id ="audio" autostart="false"></audio>
+    </section>
+
+    <script>
+      document.addEventListener('click', function (e) {
+        const body = document.body;
+        const bullet = document.createElement('span');
+        const audio = document.getElementById('audio');
+
+        // console.log(e.__proto__);
+        let x = e.offsetX;
+        let y = e.offsetY;
+        bullet.classList.add('bullet');
+        bullet.style.left = x + 'px';
+        bullet.style.top = y + 'px';
+        body.append(bullet);
+
+
+          // remove bullet after 4 seconds;
+      window.setTimeout(() => {
+        bullet.remove();
+        blood.remove();
+      }, 4000);
+      // add bullet sound on click;
+       audio.play();
+
+
+       // add blood on screen after click;
+       function rand (min, max) {
+         return Math.round(min - 0.5 + Math.random() * (max - min + 1));
+       }
+      let images = [
+        `url(./img/blood1.PNG)`,
+        `url(./img/blood2.PNG)`,
+        `url(./img/blood3.PNG)`,
+        `url(./img/blood4.PNG)`,
+
+      ];
+
+       const blood = document.createElement('span');
+       blood.classList.add('blood');
+       blood.style.left = Math.random() * innerWidth + 'px';
+       blood.style.top = Math.random() * innerHeight + 'px';
+       blood.style.background = images[rand(0, 3)]
+       body.append(blood);
+
+      });
+
+
+    
+
+    </script>
+  </body>
+</html>

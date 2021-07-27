@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+img {
+    width: 100%;
+
+}
+
+.name {
+    font-weight: bold;
+    /* border: solid; */
+}
+
+.streamers {
+    border: solid;
+    display: flex;
+    text-align: center;
+}
+.icon {
+    width: 10em;
+    height: 10em;
+    border: red solid;
+    position: relative;
+    transition: transform .2s ease;
+}
+
+.streamers img  {
+    
+    border-radius: 50%;
+}
+
+
+.streamer:hover .icon {
+    transform: translateY(-20%);
+}
+.streamer .icon:hover {
+    transform: translateY(-20%) scale(1.1);
+    /* cursor: pointer; */
+}
+.streamer:hover {
+    cursor: pointer;
+}
+.streamer:hover .icon::before {
+    opacity: 1;
+}
+/* ###################################### */
+.icon::before,
+.icon::after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background: lightcoral; */
+    border-radius: 50%;
+    color: #fff;
+}
+
+.icon::before {
+    content: "\f04b";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    background: #f00;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    font-style: normal;
+    z-index: 10;
+    transition: 
+        opacity .1s linear,
+        background-color .1s linear;
+}
+.icon:hover::before {
+    background: #a70505;
+    /* opacity: 1; */
+
+}
+
+.icon:hover::after {
+    /* opacity: 1; */
+    background: red;
+    /* z-index: 1; */
+    animation: pulse 1s  infinite;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(.8);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
