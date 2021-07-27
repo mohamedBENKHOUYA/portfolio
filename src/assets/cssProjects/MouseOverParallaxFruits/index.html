@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charse t="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Summer | Mouse parallax</title>
+</head>
+<body>
+
+  
+
+  <div class="banner">
+    <div class="container">
+      <div id="scene">
+        <h2 id="text">
+          <span data-depth-y = '1'>S</span>
+          <span data-depth-y = '2'>u</span>
+          <span data-depth-y = '-5'>m</span>
+          <span data-depth-y = '3'>m</span>
+          <span data-depth-y = '9'>e</span>
+          <span data-depth-y = '-3'>r</span>
+        </h2>
+        <div class="layer">
+          <img data-depth=".5" src="./img/png/001-watermelon.png" alt="">
+          <img data-depth="-0.5" src="./img/png/002-watermelon-1.png" alt="">
+          <img data-depth=".7" src="./img/png/003-strawberry.png" alt="">
+          <img data-depth=".3" src="./img/png/004-popsicle.png" alt="">
+          <img data-depth="-1" src="./img/png/005-ice-cream.png" alt="">
+          <img data-depth=".3" src="./img/png/006-ice-cream-1.png" alt="">
+          <img data-depth="-0.9" src="./img/png/007-piece-of-cake.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script>
+    var text = document.getElementById('text');
+    var parallaxInstance = new Parallax(text);
+    var layer = document.querySelector('.layer');
+    var parallaxInstance = new Parallax(layer);
+    console.log(parallaxInstance)
+  </script>
+</body>
+</html>

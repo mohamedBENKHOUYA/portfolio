@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #fff;
+}
+
+body {
+  min-height: 100vh;
+  /* display: grid; */
+  /* place-items: center; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  /* align-content: center; */
+  /* justify-content: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #070c15;
+}
+.imgBox {
+  /* align-self: center; */
+  /* justify-self: center; */
+  /* border: solid #fff; */
+  position: relative;
+  width: 442px;
+  height: 500px;
+}
+
+.imgBox textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  /* max-height: 100%; */
+  background: url(./pokedex.png);
+  background-size: 500px 500px;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  resize: none;
+  border: none;
+  opacity: 0.3;
+  filter: grayscale(1);
+  outline: none;
+}
+
+.imgBox textarea:last-of-type {
+  opacity: 1;
+  filter: none;
+  /* width: 50px; */
+  /* resize: horizontal; */
+  border-right: 2px solid #fff;
+  animation-name: animWidth;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  
+}
+
+@keyframes animWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+body div .text1 { opacity: 0 !important; }
+
+div .text1 { opacity: 1 !important; }
+

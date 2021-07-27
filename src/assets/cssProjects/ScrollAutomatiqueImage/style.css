@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #212f48;
+}
+.box {
+  /* border: solid red; */
+  width: 600px;
+  height: 400px;
+  /* overflow: hidden; */
+  position: relative;
+  
+}
+.box div {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+}
+.box img {
+  width: 100%;
+  /* height: 400px; */
+  animation-name: animate;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;  
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+.box::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  transform: skew(2deg, 4deg);
+  background: linear-gradient(to right bottom, rgb(231, 165, 66), rgb(214, 68, 178))
+}
+.box::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  transform: skew(2deg, 4deg);
+  background: linear-gradient(to right bottom, rgb(231, 165, 66), rgb(214, 68, 178));
+  filter: blur(50px)
+}
+
+
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY( calc( -100% + 400px ) );
+  }
+}
