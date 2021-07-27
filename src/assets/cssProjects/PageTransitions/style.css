@@ -1,0 +1,40 @@
+
+body {
+    overflow: hidden;
+}
+.transition-fade {
+    opacity: 1;
+    transition: all 500ms;
+    transform: translateY(0);
+    transform-origin: left;
+}
+
+/*  quand on click, quand l'animation commence, il est générale*/
+html.is-animating .transition-fade {
+    /* opacity: 0; */
+    transform: translateX(100%);
+}
+
+/* Quand on quite, beaucoup plus précisée */
+html.is-leaving .transition-fade{
+    transform: translateX(0);
+    opacity: 0;
+}
+
+
+.transition-swipe {
+    transition: 500ms;
+    transform: translateY(0);
+}
+html.is-animating .transition-swipe {
+    transform: translateY(100px);
+}
+
+
+/* html.is-changing .transition-fade {
+    transform: rotate(90deg);
+}
+
+html.is-rendering .transition-fade {
+    transform: rotate(0);
+} */

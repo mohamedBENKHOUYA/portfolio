@@ -1,0 +1,177 @@
+*, 
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+ *,
+ *::before, 
+ *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background: #f5F5F5;
+     color: #18314F;
+     font-family: 'Crimson Text', serif;
+     font-size: 1.5rem;
+     /* line-height: 1.4 */
+ }
+
+ h1 {
+     text-align: center;
+     font-size: 2rem;
+     text-transform: uppercase;
+     letter-spacing: 15px;
+     line-height: 1;
+     font-weight: 400;
+     margin: 3em 0;
+ }
+
+ h2 {
+     font-weight: 400;
+     text-transform: uppercase;
+     font-size: 1rem;
+     margin-bottom: 3em;
+     letter-spacing: 8px;
+     text-align: center;
+     color: #8BBeB2;
+     border: solid;
+     /* line-height: 2; */
+     /* display: inline-block; */
+ }
+
+ h2::after {
+     content: '';
+     display: block;
+     /* border-bottom:  */
+     width: 20%;
+     /* height: 100px; */
+     margin: 3em auto 0;
+ }
+
+ h2 span {
+     font-size: 5em;
+     font-weight: 700;
+     display: block;
+     color: #18314F;
+ }
+
+ a {
+     color: #8BB3B2;
+     &:hover {
+         color: #7AE7C7;
+     }
+ }
+
+ section {
+     
+     background: #fff;
+     box-shadow: 0 0 20px  rgba(0, 0, 0, .25);
+     width: 80%;
+     margin: 50px auto;
+     padding: 50px;
+    //  border: solid;
+
+ }
+
+ .a {
+
+ }
+
+ .universal {
+     code {
+         background: #C3DDD7;
+         padding: .25em;
+        //  border: solid;
+
+     }
+ }
+
+ .direct-children {
+     .example {
+         padding: 1em;
+         background: #C3DDD7;
+         p {
+            margin: 0;
+        }
+     }
+ }
+
+ .adjacent-sibling .box {
+     height: 75px;
+     width: 75px;
+     background: rgba(0, 0, 0, .5);
+     display: inline-block;
+ }
+
+ .general-sibling .box {
+     height:75px;
+     width: 75px;
+     background: rgba(0, 0, 0 , .5);
+     display: inline-block;
+ }
+
+ /* =================================
+   Universal 
+   ================================= */
+
+ 
+a[target$='adff'] {
+    color: red;
+}
+
+
+a[class|='-link'] {
+    color: red;
+}
+
+a[target='_blank']::after {
+    content: 'external';
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+   Direct children
+   ================================= */
+
+   .direct-children p {
+    color: red;
+  }
+  
+  .direct-children > p {
+    color: green;
+  }
+
+/* =================================
+   Adjacent siblings
+   ================================= */
+
+
+   .adjacent-sibling .box + .box {
+    background: red;
+  }
+/* =================================
+   General siblings
+   ================================= */
+
+   .general-sibling .box ~ .box {
+    background: red;
+  }
+      
