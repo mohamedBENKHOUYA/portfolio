@@ -44,6 +44,11 @@
       "go":"./assets/cssProjects/ComparisonSlider"
    },
    {
+      "img":"./assets/images/CheckoutFrom.gif",
+      "h3":"CSS-CheckoutFrom",
+      "go":"./assets/cssProjects/CheckoutFrom"
+   },
+   {
       "img":"./assets/images/ContactUs.png",
       "h3":"CSS-ContactUs",
       "go":"./assets/cssProjects/ContactUs"
