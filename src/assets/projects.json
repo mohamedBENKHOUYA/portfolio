@@ -54,6 +54,11 @@
       "go":"./assets/cssProjects/ContactUs"
    },
    {
+      "img":"./assets/images/WavyLine.gif",
+      "h3":"CSS-WavyLine",
+      "go":"./assets/cssProjects/WavyLine"
+   },
+   {
       "img":"./assets/images/CrackedMen.png",
       "h3":"CSS-CrackedMen",
       "go":"./assets/cssProjects/CrackedMen"
