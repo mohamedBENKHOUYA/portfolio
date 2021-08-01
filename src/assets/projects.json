@@ -18,7 +18,7 @@
       "go":"./assets/cssProjects/3DRotationAnimation"
    },
    {
-      "img":"./assets/images/AnimatedCardWithCss.gif",
+      "img":"./assets/images/animatedcardwith.gif",
       "h3":"CSS-Animated card with HTML and CSS",
       "go":"./assets/cssProjects/AnimatedCardWith"
    },
@@ -28,7 +28,7 @@
       "go":"./assets/cssProjects/BackgroundGenerator"
    },
    {
-      "img":"./assets/images/BatteryLevel.gif",
+      "img":"./assets/images/BatteryLevel.png",
       "h3":"CSS-BatteryLevel",
       "go":"./assets/cssProjects/BatteryLevel"
       
@@ -59,19 +59,14 @@
       "go":"./assets/cssProjects/WavyLine"
    },
    {
-      "img":"./assets/images/CrackedMen.gif",
+      "img":"./assets/images/CrackedMen.png",
       "h3":"CSS-CrackedMen",
       "go":"./assets/cssProjects/CrackedMen"
    },
    {
-      "img":"./assets/images/CreatingAresponsiveAsymmetricalDesign.gif",
+      "img":"./assets/images/CreatingAresponsiveAsymmetricalDesign.png",
       "h3":"CSS-CreatingAresponsiveAsymmetricalDesign",
       "go":"./assets/cssProjects/CreatingAresponsiveAsymmetricalDesign"
-   },
-   {
-      "img":"./assets/images/CssHoverEffects.gif",
-      "h3":"CSS-CssHoverEffects",
-      "go":"./assets/cssProjects/CssHoverEffects"
    },
    {
       "img":"./assets/images/CurvedOutside.gif",
@@ -84,7 +79,7 @@
       "go":"./assets/cssProjects/EcommerceCards"
    },
    {
-      "img":"./assets/images/expandingSearch.gif",
+      "img":"./assets/images/expandingSearchBar.gif",
       "h3":"CSS-expanding search bar using focus",
       "go":"./assets/cssProjects/expanding search bar using focus"
    },
@@ -139,7 +134,7 @@
       "go":"./assets/cssProjects/RealGlasssmorphism Card Hover Effects"
    },
    {
-      "img":"./assets/images/ResponsiveAdminDashboard.gif",
+      "img":"./assets/images/respinsiveadmindashborad.gif",
       "h3":"CSS-Responsive Admin Dashboard",
       "go":"./assets/cssProjects/Responsive Admin Dashboard"
    },

@@ -1,0 +1,221 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+  background: #fff;
+}
+
+.sec {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  transition: background 0.8s ease;
+}
+
+.sec::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgb(209, 18, 226),
+    rgb(209, 2, 2)
+  );
+  clip-path: circle(30% at 70% 70%);
+  z-index: -1;
+  transition: background 1s ease-in-out;
+}
+
+.sec::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgb(50, 18, 226),
+    rgb(209, 2, 2)
+  );
+  clip-path: circle(20% at 30% 30%);
+  z-index: -1;
+  transition: background 1s ease-in-out;
+}
+
+.sec.dark::before {
+  background: linear-gradient(
+    to right bottom,
+    rgb(226, 94, 18),
+    rgb(238, 122, 122)
+  );
+}
+.sec.dark::after {
+  background: linear-gradient(
+    to right bottom,
+    rgb(62, 59, 75),
+    rgb(240, 140, 140)
+  );
+}
+
+.box {
+  /* border: solid; */
+  width: 260px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.2);
+  /* opacity: .4; */
+  backdrop-filter: blur(25px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h3 {
+  color: #9d2cb1;
+  font-weight: 700;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.content .batteryShape {
+  position: relative;
+  width: 140px;
+  height: 50px;
+  margin: 20px 0;
+  border: 3px solid #333;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  transition: border 1s ease;
+}
+.sec.dark .content .batteryShape {
+  border: 3px solid #fff;
+}
+.batteryShape::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 16px;
+  background: #333;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: background 1s ease;
+}
+.sec.dark .content .batteryShape::before {
+  background: #fff;
+}
+.batteryShape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.level {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  /* background: #333; */
+  border-radius: 4px;
+  /* border: solid; */
+  overflow: hidden;
+}
+.percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: red;
+  transition: background 5s ease;
+}
+
+.sec.dark .percentage {
+  background: #fff
+}
+
+.percent {
+  color: #fe3177;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.toggle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #161623;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark .toggle {
+  background: #fff;
+}
+.toggle.active::before {
+  content: '\f185';
+  color: #000;
+  /* position: absolute; */
+  /* border: solid; */
+  font-family: fontAwesome;
+  /* line-height: 1.8; */
+  animation-name: animToggleSun;
+  animation-duration: 1s;
+}
+.toggle::before {
+  content: '\f186';
+  color: #fff;
+  /* position: absolute; */
+  /* border: solid; */
+  font-family: fontAwesome;
+  /* line-height: 1.8; */
+  animation-name: animToggleMoon;
+  animation-duration: 1s;
+}
+
+@keyframes animToggleSun {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animToggleMoon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
