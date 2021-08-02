@@ -134,6 +134,11 @@
       "go":"./assets/cssProjects/RealGlasssmorphism Card Hover Effects"
    },
    {
+      "img":"./assets/images/gmailClone.gif",
+      "h3":"React gmail clone app with firebase",
+      "go":"./assets/cssProjects/gmailClone"
+   },
+   {
       "img":"./assets/images/respinsiveadmindashborad.gif",
       "h3":"CSS-Responsive Admin Dashboard",
       "go":"./assets/cssProjects/Responsive Admin Dashboard"
