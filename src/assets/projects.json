@@ -139,6 +139,11 @@
       "go":"./assets/cssProjects/Responsive Admin Dashboard"
    },
    {
+      "img":"./assets/images/ParticlesEffectOnMousemove.gif",
+      "h3":"CSS-ParticlesEffectOnMousemove",
+      "go":"./assets/cssProjects/ParticlesEffectOnMousemove"
+   },
+   {
       "img":"./assets/images/ResponsiveAdminRegistration.gif",
       "h3":"CSS-Responsive Registration Form",
       "go":"./assets/cssProjects/Responsive Registration Form"
