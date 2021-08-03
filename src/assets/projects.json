@@ -99,11 +99,6 @@
       "go":"./assets/cssProjects/GsapParallax"
    },
    {
-      "img":"./assets/images/JavascriptDunamicCalendar.gif",
-      "h3":"CSS-JavascriptDunamicCalendar",
-      "go":"./assets/cssProjects/JavascriptDunamicCalendar"
-   },
-   {
       "img":"./assets/images/MouseOverParallaxFruits.gif",
       "h3":"CSS-MouseOverParallaxFruits",
       "go":"./assets/cssProjects/MouseOverParallaxFruits"
