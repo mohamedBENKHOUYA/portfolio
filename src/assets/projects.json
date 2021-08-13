@@ -99,6 +99,11 @@
       "go":"./assets/cssProjects/GsapParallax"
    },
    {
+      "img":"./assets/images/CornerTextParallax.gif",
+      "h3":"CSS-CornerTextParallax",
+      "go":"./assets/cssProjects/CornerTextParallax"
+   },
+   {
       "img":"./assets/images/MouseOverParallaxFruits.gif",
       "h3":"CSS-MouseOverParallaxFruits",
       "go":"./assets/cssProjects/MouseOverParallaxFruits"
