@@ -133,3 +133,14 @@ fetch('./assets/projects.json')
       contentProjects.appendChild(link);
     });
   });
+
+// Circle Text profile photo
+const text = document.querySelector('.text p');
+console.log(text.innerText.split(''));
+
+text.innerHTML = text.innerText
+  .split('')
+  .map((char, index) => {
+    return `<span style="transform: rotate(${index * 6.4}deg)">${char}</span>`;
+  })
+  .join('');

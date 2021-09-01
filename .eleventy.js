@@ -9,4 +9,5 @@ module.exports = function (eleventyConfig) {
       output: 'public',
     },
   };
+  o;
 };

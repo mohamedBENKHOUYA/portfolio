@@ -218,20 +218,45 @@ body {
   /* border: solid; */
 }
 .banner .imgBx {
-  /* position: relative; */
-  width: 300px;
-  height: 300px;
-  /* border: solid; */
+  position: relative;
+  width: 400px;
+  height: 400px;
   /* overflow-y: hidden; */
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* border: solid; */
   margin-bottom: 1.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ccc;
+}
+.banner .imgBx .text {
+  position: absolute;
+  /* border: solid; */
+  width: 100%;
+  height: 100%;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.banner .imgBx .text p span {
+  /* border: solid; */
+  left: 50%;
+  position: absolute;
+  transform-origin: 0 195px;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg);
+  }
 }
 .imgBx img {
   /* position: absolute; */
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
-  object-position: right;
+  object-position: center;
   border-radius: 50%;
 }
 .banner .name {
@@ -801,8 +826,11 @@ textarea {
   }
 
   .banner .imgBx {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
+  }
+  .banner .imgBx .text p span {
+    transform-origin: 0 103px;
   }
   .banner .content {
     gap: 2rem;
